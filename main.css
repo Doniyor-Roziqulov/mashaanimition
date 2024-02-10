@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    height: auto;
+}
+
+.container {
+    width: 840px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-image: url(./images/masha.jpg);
+    background-size: 521px;
+    background-repeat: no-repeat;
+    perspective: 1500px;
+    background-position: center;
+    margin-top: 80px;
+}
+
+.parent:hover .parent__box {
+    transform: rotateY(120deg);
+}
+
+.parent:hover .parent__box--first {
+    transform: rotateY(-120deg);
+}
+
+.parent__box {
+    width: 250px;
+    height: 500px;
+    background-image: url(./images/door.webp);
+    border: 1px solid #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 412px 530px;
+    transition: transform 0.5s linear;
+}
+
+.parent__box {
+    transform-origin: right center;
+}
+
+.parent__box--first {
+    transform-origin: left center;
+}
